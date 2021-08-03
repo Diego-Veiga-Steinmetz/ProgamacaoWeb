@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> Programação Web com PHP </title> 
+  <link rel="stylesheet" href="formata-formulario.css">
+</head> 
+
+<body> 
+ <h1> Comissão com PHP</h1>
+ <form action="exerc6.php" method="POST">
+  <fieldset>
+   <legend> Comissão do vendedor </legend>
+
+   <label class="alinha"> Valor total da compra: </label>
+   <input type="number" name="totalcompra" min ="0" step="0.01" > <br> 
+
+   <label class="alinha"> Percentual de comissão do vendedor: </label>
+   <input type="number" name="comissão" step="0.01" min="0" > <br>
+
+   <button name="enviar-dados"> Processar dados da Temperatura </button>
+  </fieldset>
+ </form>    
+</body> 
+</html> 

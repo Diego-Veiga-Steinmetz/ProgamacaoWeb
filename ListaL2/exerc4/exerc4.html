@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> Programação Web com PHP </title> 
+  <link rel="stylesheet" href="formata-formulario.css">
+</head> 
+
+<body> 
+ <h1> Cálculo de médias com da UC PRW PHP </h1>
+ <form action="exerc4.php" method="post">
+  <fieldset>
+   <legend>  CTDW-PRW-Dados cadastrais do aluno</legend>
+   <label> Selecione os produtos a serem adquiridos: </label><br>
+
+   <!--ATENÇÃO: Cuidado com o uso dos colchetes [] após o nome de cada -->
+   <input type="checkbox" name="produtos" value = "Impressora"> Impressora <br>
+   <input type="checkbox" name="produtos" value = "Celular"> Celular <br>
+   <input type="checkbox" name="produtos" value = "Notebook"> Notebook <br>
+
+      <button name="enviar-dados"> Processar comprar do cliente</button>
+  </fieldset>
+ </form>    
+</body> 
+</html> 

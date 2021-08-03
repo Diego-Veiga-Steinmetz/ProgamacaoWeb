@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> Programação Web com PHP </title> 
+  <link rel="stylesheet" href="formata-formulario.css">
+</head> 
+
+<body> 
+ <h1> Dados cadastrais de alunos com matrizes em PHP </h1>
+ <form action="exerc1.php" method="post">
+  <fieldset>
+    <legend> Dados cadatrais do aluno 1 </legend>
+
+      <label class="alinha"> Nome do aluno 1: </label>
+      <input type="text" name="nome1" autofocus placeholder="Nome do aluno"> <br>
+
+      <label class="alinha"> Matricula do aluno 1: </label>
+      <input type="text" name="matric1" min="0" max="10"> <br>
+
+      <label class="alinha"> Media 1: </label>
+      <input type="number" name="media1" min="0" max="10"> <br>
+  </fieldset>
+
+  <fieldset>
+    <legend> Dados cadatrais do aluno 2 </legend>
+
+      <label class="alinha"> Nome do aluno 2: </label>
+      <input type="text" name="nome2" autofocus placeholder="Nome do aluno"> <br>
+
+      <label class="alinha"> Matricula do aluno 2: </label>
+      <input type="text" name="matric2" min="0" max="10"> <br>
+
+      <label class="alinha"> Media 2: </label>
+      <input type="number" name="media2" min="0" max="10"> <br>
+  </fieldset>
+
+  <fieldset>
+    <legend> Dados cadatrais do aluno 3 </legend>
+
+      <label class="alinha"> Nome do aluno 3: </label>
+      <input type="text" name="nome3" autofocus placeholder="Nome do aluno"> <br>
+
+      <label class="alinha"> Matricula do aluno 3: </label>
+      <input type="text" name="matric3" min="0" max="10"> <br>
+
+      <label class="alinha"> Media 3: </label>
+      <input type="number" name="media3" min="0" max="10"> <br>
+  </fieldset>
+
+      <button name="enviar-dados"> Calcular média</button>
+  
+ </form>    
+</body> 
+</html> 
