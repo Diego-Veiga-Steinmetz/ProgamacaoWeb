@@ -145,9 +145,12 @@ if (isset($_POST['enviar-dados']))
     print_r($vetorAuxiliar);
     echo "</pre>";*/
 
-    $coluna_nome_medicamento = array_column($matriz, 0);
-    array_multisort($coluna_nome_medicamento , SORT_ASC, $matriz);
-
+    foreach ($matriz as $codigo => $vetorInterno)
+    {
+        $vetorAuxiliarNome[$codigo] = $vetorInterno[0];
+    }
+    asort($vetorAuxiliarNome);
+     
     echo "<table>
           <caption> Dados dos medicamento ordenados crescente de ordem alfábetica </caption>
           <tr> <br>
@@ -158,10 +161,9 @@ if (isset($_POST['enviar-dados']))
  
     
     //com o laço foreach, percorremos o vetor auxilar já ordernado
-    foreach ($matriz as $codigo => $vetorInterno)
+    foreach ($vetorAuxiliarNome as $codigo => $nome)
     {
-      $preco = $vetorInterno[1];
-      $nome = $vetorInterno[0];
+      $preco = $matriz[$codigo][1];
       $MediaFormatada = number_format($preco, 1, ",", ".");
 
       echo "<tr>
