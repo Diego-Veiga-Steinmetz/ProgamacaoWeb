@@ -87,11 +87,7 @@ if (isset($_POST['enviar-dados']))
     {
         $vetorAuxiliar[$codigo] = $vetorInterno[1];
     }
-    if (isset($preco1 === false))
-    {
-      echo "BU"
-    }
-
+    
     //descobrindo o menor preço
     $menorMedicamento = min($vetorAuxiliar);
 
@@ -148,7 +144,10 @@ if (isset($_POST['enviar-dados']))
     /*echo "<pre>";
     print_r($vetorAuxiliar);
     echo "</pre>";*/
-    
+
+    $coluna_nome_medicamento = array_column($matriz, 0);
+    array_multisort($coluna_nome_medicamento , SORT_ASC, $matriz);
+
     echo "<table>
           <caption> Dados dos medicamento ordenados crescente de ordem alfábetica </caption>
           <tr> <br>
@@ -156,18 +155,20 @@ if (isset($_POST['enviar-dados']))
             <th> Código </th>
             <th> Medicamento </th>        
           </tr>";
-
+ 
+    
     //com o laço foreach, percorremos o vetor auxilar já ordernado
-    foreach ($vetorAuxiliar as $codigo => $preco)
+    foreach ($matriz as $codigo => $vetorInterno)
     {
-        $nome = $matriz[$codigo][0];
-        $MediaFormatada = number_format($preco, 1, ",", ".");
+      $preco = $vetorInterno[1];
+      $nome = $vetorInterno[0];
+      $MediaFormatada = number_format($preco, 1, ",", ".");
 
-        echo "<tr>
-            <td>$MediaFormatada</td>
-            <td>$codigo</td>
-            <td>$nome</td>
-            </tr>";
+      echo "<tr>
+          <td>$MediaFormatada</td>
+          <td>$codigo</td>
+          <td>$nome</td>
+          </tr>";
     }
 
 }
